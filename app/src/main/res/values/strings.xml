@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Bootcamp</string>
+    <string name="ok">Ok</string>
+    <string name="name">Name</string>
+    <string name="pressure">\"Pressure: <b>%1$f</b>\"</string>
+    <string name="humidity">\"Humidity: <b>%1$f</b>\"</string>
+</resources>

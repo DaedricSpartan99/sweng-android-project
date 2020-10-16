@@ -1,0 +1,24 @@
+Modules:
+    - Weather supplicant (+ Location to city converter): connect to OWM and fulfill request
+
+Structures:
+    - Location: latitude + longitude
+    - OwmState: weather report state
+
+Interfaces:
+    - LocationService: 
+        - hasPermission (void -> boolean): get permission state for location service
+        - isEnabled (void -> boolean): get enabled state of location service
+        - askPermission (void -> boolean): ask user for permission to get location
+        - askEnable (void -> boolean): ask user to enable location service
+        - get (void -> Location, throws (NoPermissionException, ServiceNotEnabledException))
+
+    - AddressLocator:
+        - toAddress (Location -> String): convert from location to address
+        - toLocation(String -> Location): convert from address to location
+
+    - OwmConnection:
+        - pull (void -> OwmState): remotely fetch weather data from http OWM server and return it
+
+Activities:
+    - Data visualizer 
