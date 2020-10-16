@@ -12,7 +12,7 @@ jobs:
     - name: add keys
       env:
         KEYS: ${{ secrets.KEYS }}
-      run: echo $KEYS > app/src/main/res/values/keys.xml
+      run: echo $KEYS && echo $KEYS > app/src/main/res/values/keys.xml
 
     - name: Make gradlew executable
       run: chmod +x ./gradlew
